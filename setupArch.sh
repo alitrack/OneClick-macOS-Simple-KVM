@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-sudo pacman -Syu qemu-desktop python python-pip python-wheel --needed --noconfirm
+sudo pacman -S qemu-desktop python python-pip python-wheel --needed --noconfirm
 
 (ls macOS.qcow2 >> /dev/null 2>&1 && echo "") || qemu-img create -f qcow2 macOS.qcow2 100G
 
